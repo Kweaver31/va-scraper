@@ -9,7 +9,7 @@ soup = BeautifulSoup(page.content, 'html.parser') #Parse file and call it soup
 
 links_section = soup.find(id='homepage-benefits') #Get content from benefits section
 links_section = str(links_section) #Turn the links_section into a string
-links_section = links_section.replace("href=\"", "href=\"https://va.gov") #Route the href tags to va.gov
+links_section = links_section.replace("href=\"", "href=\"https://va.gov") #Route hyperlinks from rel location to absolute
 
 #Content for HTML page
 htmlpage = """<!DOCTYPE html>
